@@ -1,0 +1,146 @@
+﻿【1.3.1.1030】
+增加单点认证功能
+【1.3.0.0622】
+1.去除amaadmin的图片样式脚本等
+2.js包分类存放
+3.网页报错页面ui优化
+4.接口类命名规范修正
+5.url属性与模块物理隔离
+6.xmlconfig及logo图片升级覆盖考虑
+7.模块权限与导航关联修改
+【1.2.0.0525】
+1.Js、Css、图片整理及调用说明
+2.网站支持上传自定义样式包
+3.支持上传logo
+4.login页面改为html由个人项目提供样式
+5.增加全局错误拦截及查询
+6.权限模块整理 开发模式改变为对照接口开发
+7.登录方式改变对照接口开发 平台不再有用户表
+【1.1.7.0120】
+1.新增3、4登录页面，/App_Themes/Platform/login/文件夹下 login3 login4
+2.修改/App_Themes/Platform/style.Upload.css 及login.aspx
+【1.1.6.0104】
+1.新增登录界面可供选择 在xmlConfig配置文件中新增/login/Style配置 配置登录界面样式 代号代表意思 最初版代号 1 蓝色弹窗代号 2
+2.修改Main.aspx界面样式 
+【1.1.5.0425】
+1. 删除角色时提示拥有该角色的人员
+\BasePlat\DBUtils\Dic_StaffInfo(人员表)\TAB_Dic_StaffInfo.cs
+\Page\Platform\UserRole\ashx\TAB_UserRole.ashx
+\Page\Platform\UserRole\TAB_UserRole.aspx
+2.模块管理删除时删除对应关系表记录
+BasePlat\DBUtils\TAB_Module_Relation(角色连接管理)\TAB_Module_Relation.cs
+\Page\Platform\Module_Information\ashx\Module_Information.ashx
+\_JScripts\Platform\my.js 中的TreeGridpublicDelete方法
+3.日历框用回my97datepicker
+新增\_JScripts\Platform\My97DatePicker\
+4.增加bluebg皮肤 
+更新：
+
+\App_Themes\Platform\css\style.bluebg.css
+Main.aspx
+5.url前及页面title前增加图标
+\_Images\Platform\favicon.ico
+\_Images\Platform\Login\logo.png
+Login.aspx
+\_Masters\show.master
+6.增加模块管理及角色管理导入导出功能
+\Page\Platform\UserRole\TAB_UserRole.aspx
+\Page\Platform\Module_Information\Module_Information.aspx
+BasePlat.dll
+7.修复模块管理空数据时无法新增bug
+\Page\Platform\Module_Information\ashx\Module_Information.ashx
+需要修改TAB_Module_Information基础数据
+“导航主菜单 nID ->1 nParentID->0 所有nParentID=2的修改为1”
+\Main.aspx
+8.新增上传自定义图标功能 
+更新 \App_Themes\Platform\css\style.default.css
+\Page\Platform\Module_Information\Module_InformationEdit.aspx
+\Page\Platform\Module_Information\UploadIcon.aspx
+9.更新了网站logo 
+【1.1.4.0114】
+1.修改leftMain页面默认选中功能在某些页面将左侧隐藏问题
+2.解决一个ip下多个网站cookie未区分bug
+xmlconfig.xml新增SitePort配置项
+修改了\Page\Platform\ConnectionConfig\Edit.aspx及
+Page\Platform\ConnectionConfig\Edit.aspx.cs页面
+可配置端口
+更新BasePlat.dll（baseplat中的BasePlat\Logic\登录验证\LoginInfo.cs）
+系统管理模块增加“基本信息”模块url地址/Page/Platform/ConnectionConfig/Edit.aspx
+3.更新ThinkFreely.DBUtility.dll 启用了 TransExe 事务方法 
+4.更新了my.js中的 settime方法
+【1.1.3.0105】
+1.点某模块leftmain页面打开后 左边下拉菜单 展开默认选中项的菜单;
+更新LeftMain.aspx
+2.系统地图修改为根据角色权限显示相应的系统地图
+\Page\Platform\Module_Information\SiteMap.aspx
+\Page\Platform\Module_Information\SiteMap.aspx.cs
+3 编辑页面为空提示后未获取焦点
+更新my.js
+4 人员修改界面有滚动条;
+\Page\Platform\Dic_StaffInfo\Dic_StaffInfo_Edit.aspx
+5.数据库WebPlatForm_Module_Relation表去掉nTabIndex、charRoleMark列，并更新
+WebPlatForm_Module_Information表触发器 及VIEW_WebPlatForm_Role视图去掉相应列名
+6.ie8下换皮肤无效问题
+更新\_JScripts\Platform\frame\general.js
+7.解决系统地图新页面打开及谷歌中宽度不够问题
+8.角色管理中管理员角色不允许删除
+\Page\Platform\UserRole\TAB_UserRole.aspx
+【1.1.2.1229】
+1.更新my.js 解决edit页面输入为空提示后没获取焦点问题
+2.更新Main.aspx页面 解决重置密码页面打开过小问题
+3.更新/Page/Platform/UserRole/TAB_RolePermissions.aspx页面 解决ie9出现行位置错乱问题
+4.新增网站地图及编辑页面 该页面管理员及开发管理员身份可修改
+新增 \Page\Platform\Module_Information\SiteMap.aspx
+\Page\Platform\Module_Information\SiteMapEdit.aspx
+5.模块管理页面新增页面增加可写 可下拉框选样式
+更新 \Page\Platform\Module_Information\Module_InformationEdit.aspx
+更新\App_Themes\Platform\css\style.default.css
+6.数据库角色表新增nHidden字段 2为隐藏不显示为系统内置超管身份 1为显示不可修改 普通管理员身份
+更新WebPlatForm_UserRole表
+【1.1.1.1215】
+1.解决平台个别页面在ie8、及ie9中有字体缩小现象、弹窗缩小至左上角现象
+更新/App_Themes/Platform/themes/default/style.default.css  
+/_Masters/show.master
+Main.aspx
+2.更新jquery.uniform.min.js 并将所有引用此js地方 引用上加 charset="gb2312"
+解决上传控件 浏览按钮为英文问题
+3.更新/_JScripts/Platform/jquery-easyui/jquery.easyui.min.js 及my.js
+新增年月选择控件 绑定方法yyyymmDateBox(id) 传入id即可
+4.更改是否删除提示框，解决使用confirm时个别浏览器可以设置阻止的隐患
+5.更新/_JScripts/Platform/frame/general.js
+解决选择皮肤后关闭 再打开没有保存配置bug
+6.模块管理页面新增设置网站首页功能 不需手动配置xml
+更新/Page/Platform/Module_Information/Module_Information.aspx
+及/Page/Platform/Module_Information/ashx/Module_Information.ashx
+7.新增配置数据库连接及站点版本号、名称页面 不需手动配置xml
+新增/Page/Platform/ConnectionConfig/Edit.aspx页面 
+8.解决平台在ie8中自动开启浏览器兼容模式问题
+9.去掉系统多余样式  /App_Themes/platform中的 default文件夹及文件全部去掉 去掉mainMaster.css、myclass.css.
+所有编辑、新增edit.aspx页面确定及取消按钮高度修改为30px
+10.模块管理编辑页面增加可修改父id
+更新/Page/Platform/Module_Information/Module_InformationEdit.aspx
+11.新增最近12个月的月份下拉框 
+调用方式 MonthSelect_S("此处为下拉框id",此处为月份数量); 
+新增\Page\ashx\LastTwelveMonthSelectOption.ashx
+12.日志管理页面列表日志类型列增加图标
+更新/Page/Platform/Dat_Log/Dat_Log_List.aspx
+新增/_Images/Platform/LogTypeicon 文件夹
+【1.0.4.1207】
+支持启用、禁用单个模块
+【1.0.3.1124】
+1.支持隐藏查询条件
+【1.0.2.1120】
+1.支持旧项目改版时用旧项目人员表
+【1.0.1.1117】
+1.增加 新增按钮样式（btn_add ）、导出按钮样式（btn_export）
+2.去掉编辑页面 确定和取消按钮的冗余样式 onmouseover="this.className='rb1-13';" onmouseout="this.className='rb2-13';" 和 class="rb2-13"
+3.查询页面 查询条件样式修改 使之可以支持缩小后不隐藏查询条件
+4.my.js 更新 将页面 resize方法封装
+
+
+
+
+
+
+
+

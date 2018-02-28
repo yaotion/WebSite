@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="/_Images/Platform/LogoImg/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <title>系统登录</title>
+    <link href="/App_Themes/Platform/login/login1/login.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/_JScripts/Platform/jquery-1.8.3.js"></script>
+    <script src="/_JScripts/Platform/Common/PlatAsynchronous.js"></script>
+    <script type="text/javascript">
+        function shaked() {
+            var len = 2, //晃动的距离，单位像素
+                c = 16, //晃动次数，4次一圈
+                step = 0, //计数器
+                img = $(".password"),
+                off = img.offset();
+            this.step = 0;
+            timer = setInterval(function () {
+                var set = pos();
+                img.offset({ top: off.top + set.y * len, left: off.left + set.x * len });
+                if (step++ >= c) {
+                    img.offset({ top: off.top, left: off.left }); //抖动结束回归原位
+                    clearInterval(timer);
+                }
+            }, 45);
+        }
+
+        function pos() {
+            this.step = this.step ? this.step : 0;
+            this.step = this.step == 4 ? 0 : this.step;
+            var set = {
+                0: { x: 0, y: -1 },
+                1: { x: -1, y: 0 },
+                2: { x: 0, y: 1 },
+                3: { x: 1, y: 0 }
+            }
+            return set[this.step++];
+        }
+
+        var DEFAULT_VERSION = "8.0";
+        var ua = navigator.userAgent.toLowerCase();
+        var isIE = ua.indexOf("msie") > -1;
+        var safariVersion;
+        if (isIE) {
+            safariVersion = ua.match(/msie ([\d.]+)/)[1];
+            if (safariVersion < DEFAULT_VERSION) {
+                window.location.href = "UpdateBrowser.aspx";
+            }
+        }
+        function checkLogin() {
+            $("#tishi").hide();
+            if ($("#strUsername").val() == "") {
+                $("#tishi").html("请输入用户名");
+                $("#tishi").show();
+                return;
+            }
+            if ($("#strPassword").val() == "") {
+                $("#tishi").html("请输入密码");
+                $("#tishi").show();
+                return;
+            }
+            try{
+                AjaxPost("/Page/ashx/UserInfoHandle.ashx?strType=login", {
+                    loginInfo: "{\"name\":\"" + $("#strUsername").val() + "\",\"pwd\":\"" + $("#strPassword").val() + "\"}"
+                }, function (data) {
+                    data = eval(data);
+                    if (data.nSuccess == 1)
+                    {
+                        window.location.href = "/Main.aspx";
+                    }
+                    else if (data.nSuccess == 0)
+                    {
+                        $("#tishi").show();
+                        $("#tishi").html(data.strResult);
+                    }
+
+                })}
+            catch(err)
+            {
+                $("#tishi").html(err);
+            }
+        }
+        $(function () {
+            GetSystemConfig();
+            $("body").keydown(function () {
+                if (event.keyCode == "13") {//keyCode=13是回车键
+                    $('#btnlogin').click();
+                }
+            });
+        })
+
+        ///获取系统信息
+        function GetSystemConfig()
+        {
+            AjaxGet("/Page/ashx/UserInfoHandle.ashx?strType=GetSystemConfig", "json", function (data) {
+                data = eval(data);
+                if (data.hasOwnProperty("SiteName"))
+                {
+                    $("#leftSystemName").html(data.SiteName);
+                    $("#rightSystemName").html(data.SiteName);
+                }
+                if (data.hasOwnProperty("SiteVersion"))
+                {
+                    $("#SystemVersion").html(data.SiteVersion);
+                }
+                if (data.hasOwnProperty("PlatformVersion"))
+                {
+                    $("#SystemVersion").attr("title", "平台版本：" + data.PlatformVersion + "\n项目版本：" + data.SiteVersion);
+                }
+            })
+        }
+
+        
+
+    </script>
+</head>
+<body>
+    <div id="login1">
+        <div id="loginmain">
+            <div id="loginmiantop">
+                <div>
+                    <img alt="" src="/_Images/Platform/LogoImg/logoLogin.png" />
+
+                </div>
+                <div id="leftSystemName" class="maintitle"></div>
+            </div>
+            <div id="loginmianbanner">
+                <div id="logincontent_bj"></div>
+                <div id="logincontent_c">
+                    <div class="loginbox">
+                        <div class="loginboxtitle">人员登录<span id="rightSystemName" style="font-size: 12px; font-weight: normal; padding-left: 15px;"></span></div>
+                        <div class="loginboxinner">
+
+                            <div id="tishi" class="tishi">请输入密码</div>
+
+                            <div class="username">
+                                <div class="usernameinner">
+                                    <input type="text" id="strUsername" placeholder="工号" />
+                                </div>
+                            </div>
+
+                            <div class="password">
+                                <div class="passwordinner">
+                                    <input type="password" id="strPassword" placeholder="密码" />
+                                </div>
+                            </div>
+                            <input type="button" value="登录" onclick="return checkLogin();" id="btnlogin" style="border: none; margin-bottom: 10px;">
+                            <div style="font-weight: normal; float: right; font-size: 12px;">版本号：<span id="SystemVersion"></span></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="loginbanquan">
+                <div style="margin: 0 auto; position: relative; text-align: center;">
+                    技术支持：<a style="color: White; text-decoration: none;" href="http://www.thinkfreely.cn/">郑州畅想高科股份有限公司</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

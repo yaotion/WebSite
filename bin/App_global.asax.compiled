@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/查询站/global.asax" hash="6d1dea99" filehash="29a4ede234a0" flags="150000" assembly="Platform" type="ASP.global_asax">
+  <filedeps>
+    <filedep name="/查询站/global.asax" />
+  </filedeps>
+</preserve>

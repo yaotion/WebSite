@@ -1,0 +1,84 @@
+﻿/* CSS Document */
+body,html{
+	margin: 0px;
+	padding:0px; 
+	background: url(images/patternbg.png) #e6ebed;
+	font-size:14px; 
+	font-family:"微软雅黑",Verdana, Arial, Helvetica, sans-serif; 
+	overflow:hidden; -webkit-font-smoothing: antialiased;
+/* -moz-font-smoothing: antialiased; - No longer available in FF */
+font-smoothing: antialiased;-webkit-text-stroke: 1px transparent;
+}
+img{ border:0px;}
+#login { 
+    width:100%; height:768px;
+background: url(images/002.jpg) center center no-repeat;
+
+}
+
+
+#logincontent_bj
+{
+	width:330px; height:348px; background-color:#000;
+    filter:alpha(opacity:50);
+    opacity:0.4;
+	-moz-border-radius:0 0 7px 7px;
+	-webkit-border-radius:7px 7px 7px 7px;
+	border-radius:0px 9px 9px 0px; 
+/*	box-shadow: 0px 0px 15px #ccc; 
+	-webkit-box-shadow: 0px 0px 15px #ccc;
+	-moz-box-shadow: 0px 0px 15px #ccc;*/
+	position:absolute;
+	left:721px;
+	top:20px;	
+	} 
+#logincontent_c{width:320px; height:348px;position:relative; display:block;
+		margin:auto; top:220px; color:#fff; font-weight:bold;}
+
+
+
+#loginbanquan{ width:1024px;  font-size:14px; position:absolute; top:640px; color:#fff;}
+.loginbox { 
+	
+}
+.loginboxtitle{background:#fff; width:350px; height:55px; padding-left:20px; line-height:50px; font-size:20px; color:#666666; font-weight:normal;border-radius:9px 9px 0px 0px; }
+.loginboxinner { 
+	padding:0 20px 20px 20px; width:300px;
+}
+
+.loginbox .username { 
+    clear:both;
+	background: #eee url(/App_Themes/Platform/login/login1/images/username.png) no-repeat 13px center; -moz-border-radius: 2px; -webkit-border-radius: 2px; border:1px solid #b5b5b5; 
+	border-radius: 2px; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4); 
+	box-shadow: 0 1px 2px rgba(0,0,0,0.4); margin: 20px 0;
+}
+.loginbox .usernameinner { 
+	margin-left: 45px; border-left: 1px solid #ddd; background: #fff; padding-right: 20px; 
+	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; 
+}
+.loginbox .username input { 
+	padding: 15px 10px; border: 0; font-size: 14px; width: 100%; box-shadow: none; color: #666; 
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif; -moz-border-radius: 0 2px 2px 0; -webkit-border-radius: 0 2px 2px 0;
+	border-radius: 0 2px 2px 0;
+}
+.loginbox .password { 
+	background: #eee url(images/password.png) no-repeat 13px center; -moz-border-radius: 2px; -webkit-border-radius: 2px;  border:1px solid #b5b5b5;
+	border-radius: 2px; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4); 
+	box-shadow: 0 1px 2px rgba(0,0,0,0.4); margin: 20px 0; overflow: hidden;
+}
+.loginbox .passwordinner { margin-left: 45px; border-left: 1px solid #ddd; background: #fff; }
+.loginbox .password input { 
+	padding: 15px 10px; border: 0; font-size: 14px; width: 330px; box-shadow: none; color: #666; 
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+}
+
+.loginbox input[type=button] { 
+	background: #f0801d url(/_Images/Platform/frame/btngrad.png) repeat-x top left; border: 0; padding: 15px 0; text-align: center; 
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; width: 100%; text-transform: uppercase;  
+	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4); 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4); box-shadow: 0 1px 2px rgba(0,0,0,0.4); color:#fff;
+}
+.loginbox input[type=button]:hover { background-color: #f0721e; }
+.tishi{ color:#F00; font-size:12px; font-weight:normal; float:right; display:none; }
+.display{ display:none;}
+.maintitle{ filter:glow(color=#14345e,strength=3);}

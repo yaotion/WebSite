@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .cblue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="margin:20px;">
+        <h1>PlatCss.js</h1>
+        <div style="line-height:30px;">
+            使用地址：&lt;script src="/_JScripts/Platform/Common/PlatCss.js"&gt;&lt;/script&gt;<br />
+            使用说明：样式相关方法
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h2><a href="#setGradient" name="setGradient" class="cblue">setGradient</a></h2>
+                    <div name="setGradient" style="line-height:25px;">
+                        功能：使背景色渐变<br />
+                        传入参数：
+                        <ol>
+                            例子参数依次为id， 渐变起始颜色， 终止颜色， 0纵向 1横向
+                        </ol>
+                        例子：
+                        <ol>
+                            setGradient('example1','#4ddbbe','#d449cc',1);
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#RGB2Color" name="RGB2Color" class="cblue">RGB2Color(r, g, b) </a></h2>
+                    <div name="RGB2Color" style="line-height:25px;">
+                        功能：RGB颜色值转换为16进制颜色值<br />
+                        输入参数：
+                        <ol>
+                            r、g、b：颜色值
+                        </ol>
+                        返回值：16进制颜色值<br />
+                        例子：
+                        <ol>                           
+                            $("#result").html(RGB2Color(12,16,20));
+                        </ol>
+                        结果：#0C1014
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#byte2Hex" name="byte2Hex" class="cblue">byte2Hex(n)</a></h2>
+                    <div name="byte2Hex" style="line-height:25px;">
+                        功能：十进制转为16进制<br />
+                        输入参数：
+                        <ol>
+                            n：十进制数
+                        </ol>
+                        返回值：16进制数<br />
+                        例子：
+                        <ol>
+                            $("#result").html(byte2Hex(12));
+                        </ol>
+                        结果：0C
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

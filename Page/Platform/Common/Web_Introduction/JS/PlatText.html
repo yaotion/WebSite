@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .cblue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin:20px;">
+        <h1>PlatText.js</h1>
+        <div style="line-height:30px;">
+            使用地址：&lt;script src="/_JScripts/Platform/Common/PlatText.js"&gt;&lt;/script&gt;<br />
+            使用说明：字符串相关方法
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h2><a href="#format" name="format" class="cblue">String.prototype.format</a></h2>
+                    <div name="format" style="line-height:25px;">
+                        功能：字符类型扩展format方法<br />
+                        例子：
+                        <ol>
+                            var str="我是{0}，今年{1}岁了。";
+                            <br />
+                            var result=str.format("张三",28);
+                            <br />
+                            $("#result").html(result);
+                        </ol>
+                        结果：我是张三，今年28岁了。
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#cutcomma" name="cutcomma" class="cblue">cutcomma(str, nt, fh)</a></h2>
+                    <div name="cutcomma" style="line-height:25px;">
+                        功能：去掉字符串首尾符号<br />
+                        输入参数：
+                        <ol>
+                            str：字符串<br />
+                            nt：需要去掉的符号占的位数 <br />
+                            fh：去掉的符号</ol>
+                        返回值：去掉符号后的字符串<br />
+                        例子：
+                        <ol>
+                            var str=",张三,李四,";
+                            <br />
+                            var result=cutcomma(str,1,",");
+                            <br />
+                            $("#result").html(result);
+                        </ol>
+                        结果：张三,李四
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#toCutWordWrap" name="toCutWordWrap" class="cblue">toCutWordWrap(strWord, intLen)</a></h2>
+                    <div name="toCutWordWrap" style="line-height:25px;">
+                        功能：字符串按限定长度自动换行<br />
+                        输入参数：
+                        <ol>
+                            strWord：字符串<br /> 
+                            intLen：换行长度
+                        </ol>
+                        返回值：已自动换行的字符串<br />
+                        例子：
+                        <ol>
+                            var str="2017-01-01 10:00:00";
+                            <br />
+                            var result=toCutWordWrap(str,10);
+                            <br />
+                            $("#result").html(result);
+                        </ol>
+                        结果：2017-01-01<br/>
+                        &nbsp;&nbsp;&nbsp; 10:00:00
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#trim" name="trim" class="cblue">String.prototype.trim</a></h2>
+                    <div name="trim" style="line-height:25px;">
+                        功能：字符类型扩展trim方法(去掉首尾空格)<br />
+                        例子：
+                        <ol>
+                            var str="&nbsp;&nbsp;&nbsp;张三&nbsp;&nbsp;&nbsp;";
+                            <br />
+                            var result=str.trim();
+                            <br />
+                            $("#result").html(result);
+                        </ol>
+                        结果：张三
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#ltrim" name="ltrim" class="cblue">String.prototype.ltrim</a></h2>
+                    <div name="ltrim" style="line-height:25px;">
+                        功能：字符类型扩展ltrim方法(去掉左侧空格)<br />
+                        例子：
+                        <ol>
+                            var str="&nbsp;&nbsp;&nbsp;张三&nbsp;&nbsp;&nbsp;";
+                            <br />
+                            var result=str.ltrim();
+                            <br />
+                            $("#result").html(result);
+                        </ol>
+                        结果：张三&nbsp;&nbsp;&nbsp;
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#rtrim" name="rtrim" class="cblue">String.prototype.rtrim</a></h2>
+                    <div name="rtrim" style="line-height:25px;">
+                        功能：字符类型扩展rtrim方法(去掉右侧空格)<br />
+                        例子：
+                        <ol>
+                            var str="&nbsp;&nbsp;&nbsp;张三&nbsp;&nbsp;&nbsp;";
+                            <br />
+                            var result=str.rtrim();
+                            <br />
+                            $("#result").html(result);
+                        </ol>
+                        结果：&nbsp;&nbsp;&nbsp;张三
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

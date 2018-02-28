@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "查询站", "http://localhost:54066", "{F44D04A9-7203-464D-A810-26CFDE684631}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54066"
+		Debug.AspNetCompiler.PhysicalPath = "..\查询站\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54066\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54066"
+		Release.AspNetCompiler.PhysicalPath = "..\查询站\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54066\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\查询站\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "..\查询站调用\WebSite\WebSite.csproj", "{03BAEA44-21C9-4FC3-8EF0-496C810A2999}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F44D04A9-7203-464D-A810-26CFDE684631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44D04A9-7203-464D-A810-26CFDE684631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44D04A9-7203-464D-A810-26CFDE684631}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44D04A9-7203-464D-A810-26CFDE684631}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{03BAEA44-21C9-4FC3-8EF0-496C810A2999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03BAEA44-21C9-4FC3-8EF0-496C810A2999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03BAEA44-21C9-4FC3-8EF0-496C810A2999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03BAEA44-21C9-4FC3-8EF0-496C810A2999}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

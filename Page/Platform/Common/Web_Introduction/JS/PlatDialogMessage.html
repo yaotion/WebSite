@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .cblue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="margin:20px;">
+        <h1>PlatDialogMessage.js</h1>
+        <div style="line-height:30px;">
+            使用地址：&lt;script src="/_JScripts/Platform/Common/PlatDialogMessage.js"&gt;&lt;/script&gt;<br />
+            使用说明：弹框相关方法
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h2><a href="#Message" name="Message" class="cblue">Message(strContent, title) </a></h2>
+                    <div name="Message" style="line-height:25px;">
+                        功能：页面输出错误提示<br />
+                        例子：
+                        <ol>
+                            Message("输入错误", "提示");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#artDialogOpen" name="artDialogOpen" class="cblue">artDialogOpen(url,strTitle,width,height,lock)</a></h2>
+                    <div name="artDialogOpen" style="line-height:25px;">
+                        功能：打开对话框<br />
+                        输入参数：
+                        <ol>
+                            url：url地址（string）<br />
+                            strTitle：标题（string）<br />
+                            width：宽（int）<br />
+                            height：高（int）<br />
+                            lock：是否锁屏（true 锁屏，false 不锁屏）
+                        </ol>
+                        例子：
+                        <ol>
+                            artDialogOpen("localhost","添加",250,300,true)
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#windowopen" name="windowopen" class="cblue"> windowopen(url) </a></h2>
+                    <div name="windowopen" style="line-height:25px;">
+                        功能：打开一个新窗口<br />
+                        输入参数：
+                        <ol>
+                            url：地址
+                        </ol>
+                        例子：
+                        <ol>
+                            windowopen("localhost");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#openFullWindow" name="openFullWindow" class="cblue">openFullWindow(url, winname)</a></h2>
+                    <div name="openFullWindow" style="line-height:25px;">
+                        功能：全屏打开新窗口<br />
+                        传入参数：
+                        <ol>
+                            url：地址<br/>
+                            winname：窗口名称
+                        </ol>
+                        例子：
+                        <ol>
+                            openFullWindow("localhost","查看");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#ajaxLoading" name="ajaxLoading" class="cblue">ajaxLoading()</a></h2>
+                    <div name="ajaxLoading" style="line-height:25px;">
+                        功能：加载提示窗口显示，依赖easyui样式<br />
+                        例子：
+                        <ol>
+                            ajaxLoading();
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#ajaxLoadEnd" name="ajaxLoadEnd" class="cblue">ajaxLoadEnd()</a></h2>
+                    <div name="ajaxLoadEnd" style="line-height:25px;">
+                        功能：加载提示窗口关闭，依赖easyui样式<br />
+                        例子：
+                        <ol>
+                            ajaxLoadEnd();
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

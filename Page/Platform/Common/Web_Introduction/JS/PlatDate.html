@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .cblue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="margin:20px;">
+        <h1>PlatDate.js</h1>
+        <div style="line-height:30px;">
+            使用地址：&lt;script src="/_JScripts/Platform/Common/PlatDate.js"&gt;&lt;/script&gt;<br />
+            使用说明：日期相关方法
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h2><a href="#fmttt" name="fmttt" class="cblue">Date.prototype.fmttt</a></h2>
+                    <div name="fmttt" style="line-height:25px;">
+                        功能：给Date增加fmttt属性<br />
+                        例子：
+                        <ol>
+                            $("#result").html(new Date().fmttt("yyyy"));
+                        </ol>
+                        结果：2017
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#setTime" name="setTime" class="cblue">setTime(str, fmtt)</a></h2>
+                    <div name="setTime" style="line-height:25px;">
+                        功能：将日期字符串格式化为fmtt格式日期返回<br />
+                        输入参数：
+                        <ol>
+                            str：日期字符串
+                            <br />
+                            fmtt：格式化样式
+                        </ol>
+                        返回值：格式化后的日期字符串<br />
+                        例子：
+                        <ol>
+                            $("#result").html(setTime("2017-01-01 10:59:59","yyyy-MM"));
+                        </ol>
+                        结果：2017-01
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#compareCalendar" name="compareCalendar" class="cblue">compareCalendar(startDate, endDate)</a></h2>
+                    <div name="compareCalendar" style="line-height:25px;">
+                        功能：比较时间入口 时间字符串格式为 “2017-01-01”或  “2017-01-01 01:00:00”<br />
+                        输入参数：
+                        <ol>
+                            startDate：开始时间
+                            <br />
+                            endDate：结束时间
+                        </ol>
+                        返回值：开始时间小于结束时间 返回true  否则 返回 false <br />
+                        例子：
+                        <ol>
+                            $("#result").html(compareCalendar("2017-01-01 10:00:00","2017-01-01 10:59:59")?"true":"false");
+                        </ol>
+                        结果：true
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#compareDate" name="compareDate" class="cblue">compareDate(checkStartDate, checkEndDate)</a></h2>
+                    <div name="compareDate" style="line-height:25px;">
+                        功能：比对不带时间的日期字符串 时间字符串格式为 “2017-01-01”<br />
+                        输入参数：
+                        <ol>
+                            checkStartDate：开始日期
+                            <br />
+                            checkEndDate：结束日期
+                        </ol>
+                        返回值：开始日期小于结束日期 返回true  否则 返回 false <br />
+                        例子：
+                        <ol>
+                            $("#result").html(compareDate("2017-01-01","2017-02-01")?"true":"false");
+                        </ol>
+                        结果：true
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#compareTime" name="compareTime" class="cblue">compareTime(startDate, endDate)</a></h2>
+                    <div name="compareTime" style="line-height:25px;">
+                        功能：比对带时间的时间字符串 时间字符串格式为 “2017-01-01 10:59:59”<br />
+                        输入参数：
+                        <ol>
+                            startDate：开始时间
+                            <br />
+                            endDate：结束时间
+                        </ol>
+                        返回值：开始时间小于结束时间 返回true  否则 返回 false <br />
+                        例子：
+                        <ol>
+                            $("#result").html(compareTime("2017-01-01 10:00:00","2017-01-01 10:59:59")?"true":"false");
+                        </ol>
+                        结果：true
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#MinutesToChineseHM" name="MinutesToChineseHM" class="cblue">MinutesToChineseHM(nMinutes)</a></h2>
+                    <div name="MinutesToChineseHM" style="line-height:25px;">
+                        功能：分钟数转换为中文的时分 例如 例如 200分钟 返回3时20分 <br />
+                        输入参数：
+                        <ol>
+                            nMinutes：分钟数
+                        </ol>
+                        返回值：时分 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(MinutesToChineseHM(200));
+                        </ol>
+                        结果：03时20分
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#SecondToChineseDHM" name="SecondToChineseDHM" class="cblue"> SecondToChineseDHM(nSeconds)</a></h2>
+                    <div name="SecondToChineseDHM" style="line-height:25px;">
+                        功能：秒数转换为中文的天时分 例如 86400秒 返回1天0时0分 <br />
+                        输入参数：
+                        <ol>
+                            nSeconds：秒数
+                        </ol>
+                        返回值：天时分 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(SecondToChineseDHM(86400));
+                        </ol>
+                        结果：1天0时0分
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#SecondToHHmmss" name="SecondToHHmmss" class="cblue"> SecondToHHmmss(nSeconds)</a></h2>
+                    <div name="SecondToHHmmss" style="line-height:25px;">
+                        功能：秒数转换为时分秒 例如 36000秒 返回10:00:00 <br />
+                        输入参数：
+                        <ol>
+                            nSeconds：秒数
+                        </ol>
+                        返回值：时分秒 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(SecondToHHmmss(36000));
+                        </ol>
+                        结果：10:00:00
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#StrFormatReturnDate" name="StrFormatReturnDate" class="cblue">StrFormatReturnDate(str)</a></h2>
+                    <div name="StrFormatReturnDate" style="line-height:25px;">
+                        功能：将日期字符串格式化日期返回 <br />
+                        输入参数：
+                        <ol>
+                            str：日期字符串
+                        </ol>
+                        返回值：日期 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(StrFormatReturnDate("2017-01-01 10:00:00").toString());
+                        </ol>
+                        结果：Sun Jan 01 2017 10:00:00 GMT+0800 (中国标准时间)
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#getdate" name="getdate" class="cblue">getdate()</a></h2>
+                    <div name="getdate" style="line-height:25px;">
+                        功能：获取当前日期yyyy-mm-dd <br />                     
+                        返回值：日期 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(getdate().toString());
+                        </ol>
+                        结果：2017-05-09 10:00:18
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

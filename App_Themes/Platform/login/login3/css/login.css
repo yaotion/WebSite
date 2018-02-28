@@ -1,0 +1,140 @@
+﻿/* CSS Document */
+@charset="utf-8"; 
+body, html {
+	margin: 0px;
+	padding:0px;
+	background: #e6ebed;
+	font-size:14px;
+	font-family:"微软雅黑", Verdana, Arial, Helvetica, sans-serif;
+	overflow:hidden;
+	-webkit-font-smoothing: antialiased;
+	/* -moz-font-smoothing: antialiased; - No longer available in FF */
+    font-smoothing: antialiased;
+	-webkit-text-stroke: 1px transparent;
+}
+img {
+	border:0px;
+}
+#login_s_bj {
+	background: url(../images/003.jpg) center center no-repeat;
+	top:50%;
+	left:50%;
+	position:absolute;
+	margin-left:-1250px;
+	margin-top:-800px;
+}
+#login_s_mian {
+	width:2500px;
+	height:1600px;
+	margin:0 auto;
+	position:relative;
+}
+#logincontent_s_c {
+	background:url(../images/dengluk_bj.png) no-repeat;
+	width:500px;
+	height:291px;
+	position:absolute;
+	left:1280px;
+	top:650px;
+	color:#fff;
+	font-weight:bold;
+}
+#login_s_banquan {
+	width:1024px;
+	font-size:14px;
+	position:absolute;
+	top:640px;
+	color:#fff;
+}
+.loginbox_s {
+	padding:30px 110px 20px 110px;
+}
+.loginbox_s_inner {
+	width:280px;
+}
+.loginbox_s .title {
+	color:#0c8bd9;
+	font-size:18px;
+	font-weight:normal;
+}
+.loginbox_s .username {
+	background:  url(/App_Themes/Platform/login/login1/images/username.png) no-repeat 13px center;
+	border:1px solid #b5b5b5;
+	margin: 20px 0;
+	clear:both;
+	height:43px;
+}
+.loginbox_s .usernameinner {
+	margin-left: 35px;
+	background: #fff;
+	height:43px;
+}
+.loginbox_s .username input {
+	padding: 0px 5px;
+	border: 0;
+	font-size: 14px;
+	width:233px;
+	box-shadow: none;
+	color: #a9a9a9;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	height:43px;
+}
+.loginbox_s .password {
+	background:  url(../images/password.png) no-repeat 13px center;
+	border:1px solid #b5b5b5;
+	margin: 20px 0;
+	overflow: hidden;
+	height:43px;
+}
+.loginbox_s .passwordinner {
+	margin-left: 35px;
+	background: #fff;
+	height:43px;
+}
+.loginbox_s .password input {
+	padding: 0px 5px;
+	border: 0;
+	font-size: 14px;
+	width:233px;
+	box-shadow: none;
+	color: #a9a9a9;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	height:43px;
+}
+.loginbox_s input[type=button] {
+	background: #0c8bd9 url(/_Images/Platform/frame/btngrad.png) repeat-x top left;
+	border: 0;
+	padding: 10px 0;
+	text-align: center;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	width: 100%;
+	text-transform: uppercase;
+	color:#fff;
+	height:43px;
+}
+.loginbox_s input[type=button]:hover {
+	background-color: #0f6ba7;
+}
+.tishi_s {
+	color:#F00;
+	font-size:12px;
+	font-weight:normal;
+	float:right;
+    display:none;
+}
+.display {
+	display:none;
+}
+
+.banben_s {
+	position:absolute;
+	left:1003px;
+	top:824px;
+	width: 300px;
+	color:#fff;
+	font-weight:normal;
+	font-size:12px;
+	text-align:right;
+}

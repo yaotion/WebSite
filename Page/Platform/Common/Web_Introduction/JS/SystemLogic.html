@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .cblue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="margin:20px;">
+        <h1>SystemLogic.js</h1>
+        <div style="line-height:30px;">
+            使用地址：&lt;script src="/_JScripts/Platform/Common/SystemLogic.js"&gt;&lt;/script&gt;<br />
+            使用说明：系统通用相关方法
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h2><a href="#SetHeightWidth" name="SetHeightWidth" class="cblue">SetHeightWidth()</a></h2>
+                    <div name="SetHeightWidth" style="line-height:25px;">
+                        功能：重设datagrid宽高<br />
+                        说明：
+                         <ol>
+                             <li>默认重设easyui-datagrid 的 id 为 list的宽高</li>
+                             <li>增删改查所在的区域div的 id 为 SerachDiv</li>
+                         </ol>
+                        例子：
+                        <ol>
+                            SetHeightWidth();
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#SaveLog" name="SaveLog" class="cblue"> SaveLog(nType, strPageUrl, strPageName) </a></h2>
+                    <div name="SaveLog" style="line-height:25px;">
+                        功能：记录日志<br />
+                        输入参数：
+                        <ol>
+                            nType：类型 1-访问、2-新增、3-删除、4-修改、5-查询
+                            <br />
+                            strPageUrl：页面url
+                            <br />
+                            strPageName：页面名称
+                        </ol>
+                        例子：
+                        <ol>
+                            SaveLog(1,"localhost","测试");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#publicDelete" name="publicDelete" class="cblue">publicDelete(url, content)</a></h2>
+                    <div name="publicDelete" style="line-height:25px;">
+                        功能：公用删除easyui-datagrid 的 id为list可自动刷新<br />
+                        输入参数：
+                        <ol>
+                            url：地址
+                            <br />
+                            content：提示内容
+                        </ol>
+                        例子：
+                        <ol>
+                            publicDelete("localhost", "确认删除该项吗？");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#TreeGridpublicDelete" name="TreeGridpublicDelete" class="cblue">TreeGridpublicDelete(url, content)</a></h2>
+                    <div name="TreeGridpublicDelete" style="line-height:25px;">
+                        功能：公用删除easyui-treegrid 的 id为list可自动刷新<br />
+                        输入参数：
+                        <ol>
+                            url：地址
+                            <br />
+                            content：提示内容
+                        </ol>
+                        例子：
+                        <ol>
+                            TreeGridpublicDelete("localhost", "确认删除该项吗？");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#publicDeleteReload" name="publicDeleteReload" class="cblue"> publicDeleteReload(url, content)</a></h2>
+                    <div name="publicDeleteReload" style="line-height:25px;">
+                        功能：公用删除后刷新整个页面<br />                 
+                        输入参数：
+                        <ol>
+                            url：地址
+                            <br />
+                            content：提示内容
+                        </ol>
+                        例子：
+                        <ol>
+                            publicDeleteReload("localhost", "确认删除该项吗？");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#publicShowResult" name="publicShowResult" class="cblue"> publicShowResult(data)</a></h2>
+                    <div name="publicShowResult" style="line-height:25px;">
+                        功能：easyui-datagrid 的id为list公用删除成功后提示且刷新<br />
+                        输入参数：
+                        <ol>
+                            data：结果"true"
+                        </ol>
+                        例子：
+                        <ol>
+                            publicShowResult("true");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#publicTreeGridShowResult" name="publicTreeGridShowResult" class="cblue"> publicTreeGridShowResult(data)</a></h2>
+                    <div name="publicTreeGridShowResult" style="line-height:25px;">
+                        功能：easyui-treegrid 的id为list公用删除成功后提示且刷新<br />
+                        输入参数：
+                        <ol>
+                            data：结果"true"
+                        </ol>
+                        例子：
+                        <ol>
+                            publicTreeGridShowResult("true");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#isNullMessage" name="isNullMessage" class="cblue">isNullMessage(id, content, tle, focus)</a></h2>
+                    <div name="isNullMessage" style="line-height:25px;">
+                        功能：判断控件值是否为空<br />
+                        输入参数：
+                        <ol>
+                            id：控件id<br/>
+                            content:提示内容<br/>
+                            tle:标题<br/>
+                            focus:是否获取焦点 false-不获取 否则获取
+                        </ol>
+                        例子：
+                        <ol>
+                            isNullMessage("tbNumber", "请输入工号", "提醒");
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#ConvertFileSize" name="ConvertFileSize" class="cblue">ConvertFileSize(fSize, retain)</a></h2>
+                    <div name="ConvertFileSize" style="line-height:25px;">
+                        功能：转换文件大小接收b返回kb，mb<br />
+                        输入参数：
+                        <ol>
+                            fSize：文件大小
+                            <br />
+                            retain:保留小数点后位数
+                        </ol>
+                        例子：
+                        <ol>
+                            $("#result").html(ConvertFileSize(5000,2));
+                        </ol>
+                        结果：4.88KB
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#bytesToSize" name="bytesToSize" class="cblue">bytesToSize(bytes)</a></h2>
+                    <div name="bytesToSize" style="line-height:25px;">
+                        功能：字节转换<br />
+                        输入参数：
+                        <ol>
+                            bytes：字节大小
+                        </ol>
+                        例子：
+                        <ol>
+                            $("#result").html(bytesToSize(5000));
+                        </ol>
+                        结果：4.88KB
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#setFirstPage" name="setFirstPage" class="cblue">setFirstPage(ids)</a></h2>
+                    <div name="setFirstPage" style="line-height:25px;">
+                        功能：easyui-datagrid查询后返回第一页<br />
+                        输入参数：
+                        <ol>
+                            ids：控件id
+                        </ol>
+                        例子：
+                        <ol>
+                            setFirstPage("#list");
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

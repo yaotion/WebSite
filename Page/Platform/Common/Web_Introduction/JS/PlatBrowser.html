@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .cblue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="margin:20px;">
+        <h1>PlatBrowser.js</h1>
+        <div style="line-height:30px;">
+            使用地址：&lt;script src="/_JScripts/Platform/Common/PlatBrowser.js"&gt;&lt;/script&gt;<br />
+            使用说明：系统浏览器相关方法
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h2><a href="#GetRequest" name="GetRequest" class="cblue">GetRequest()</a></h2>
+                    <div name="GetRequest" style="line-height:25px;">
+                        功能：获取url参数<br />
+                        例子：
+                        <ol>
+                            var Request = new Object();
+                            <br />
+                            Request = GetRequest();
+                            <br />
+                            var pageid=Request['pageid'];
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#allinfo" name="allinfo" class="cblue">allinfo()</a></h2>
+                    <div name="allinfo" style="line-height:25px;">
+                        功能：获取浏览器相关信息(IE浏览器可获取所有信息，其他浏览器获取部分信息)<br />
+                        返回值：浏览器信息<br />
+                        例子：
+                        <ol>
+                            $("#result").html(allinfo());
+                        </ol>
+                        结果：
+                        <ol>
+                            浏览器类型： IE浏览器
+                            <br />
+                            浏览器属性信息： Mozilla/5.0 (Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E; rv:11.0) like Gecko
+                            <br />
+                            浏览器的正式名称： Netscape
+                            <br />
+                            浏览器的版本号： 5.0 (Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E; rv:11.0) like Gecko
+                            <br />
+                            浏览器的是否启用了cookie： true
+                            <br />
+                            cpu等级： x86
+                            <br />
+                            浏览器的MIME类型： 2
+                            <br />
+                            系统平台： Win32
+                            <br />
+                            安装的插件： [object PluginArray]
+                            <br />
+                            插件的数量： 1
+                            <br />
+                            插件的名称： Silverlight Plug-In;
+                            <br />
+                            用户设置的操作系统语言： zh-CN
+                            <br />
+                            操作系统支持的默认语言： zh-CN
+                            <br />
+                            Director： false
+                            <br />
+                            javaEnabled： true
+                            <br />
+                            是否有quickTime： false
+                            <br />
+                            flash插件情况： false
+                            <br />
+                            是否有MediaPlayer： false
+                            <br />
+                            是否有realPlayer: false
+                            <br />
+                            屏幕分辨率高度： 1080
+                            <br />
+                            屏幕分辨率宽度： 1920
+                            <br />
+                            颜色质量： 24位
+                            <br />
+                            像素： 96像素/英寸
+                            <br />
+                            字体是否平滑： true
+                            <br />
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#getPluginName" name="getPluginName" class="cblue">getPluginName()</a></h2>
+                    <div name="getPluginName" style="line-height:25px;">
+                        功能：获取浏览器安装的所有插件的名称<br />
+                        返回值：浏览器安装的插件名称 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(getPluginName());
+                        </ol>
+                        结果：Widevine Content Decryption Module;Shockwave Flash;Chrome PDF Viewer;Native Client;Chrome PDF Viewer;
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#checkePlugs" name="checkePlugs" class="cblue">checkePlugs(pluginname)</a></h2>
+                    <div name="checkePlugs" style="line-height:25px;">
+                        功能：检查是否安装了某插件，如果安装了返回版本号<br />
+                        输入参数：
+                        <ol>
+                            pluginname：插件名称
+                        </ol>
+                        返回值：有则返回版本号 否则返回false <br />
+                        例子：
+                        <ol>
+                            $("#result").html(checkePlugs("Shockwave Flash").toString());
+                        </ol>
+                        结果：25.0 r0
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#isIe" name="isIe" class="cblue">isIe()</a></h2>
+                    <div name="isIe" style="line-height:25px;">
+                        功能：判断是否IE<br />
+                        返回值：是IE浏览器 返回true  否则 返回 false <br />
+                        例子：
+                        <ol>
+                            $("#result").html(isIe().toString());
+                        </ol>
+                        结果：true
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#isFireFox" name="isFireFox" class="cblue">isFireFox()</a></h2>
+                    <div name="isFireFox" style="line-height:25px;">
+                        功能：判断是否firefox <br />
+                        返回值：是火狐浏览器 返回true  否则 返回 false  <br />
+                        例子：
+                        <ol>
+                            $("#result").html(isFireFox().toString());
+                        </ol>
+                        结果：true
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#cpuInfo" name="cpuInfo" class="cblue"> cpuInfo()</a></h2>
+                    <div name="cpuInfo" style="line-height:25px;">
+                        功能：获取CPU 信息<br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：CPU信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(cpuInfo().toString());
+                        </ol>
+                        结果：
+                        <ol>
+                            CPU 信息
+                            <br />
+                            CPU序列号:BFEBFBFF000306C3
+                            <br />
+                            x64 Family 6 Model 60 Stepping 3
+                            <br />
+                            CPU编号：CPU0
+                            <br />
+                            CPU型号：Intel(R) Core(TM) i3-4160 CPU @ 3.60GHz
+                            <br />
+                            CPU状态：1
+                            <br />
+                            CPU可用性：3
+                            <br />
+                            CUP Level：6
+                            <br />
+                            主机名称：WY-PC
+                            <br />
+                            Processor Type：3
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#softDisk" name="softDisk" class="cblue"> softDisk()</a></h2>
+                    <div name="softDisk" style="line-height:25px;">
+                        功能：软盘信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：软盘信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(softDisk().toString());
+                        </ol>
+                        结果：
+                        <ol>软盘信息</ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#RomInfo" name="RomInfo" class="cblue">RomInfo()</a></h2>
+                    <div name="RomInfo" style="line-height:25px;">
+                        功能：CD-ROM 信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：CD-ROM 信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(RomInfo().toString());
+                        </ol>
+                        结果：
+                        <ol> CD-ROM 信息
+<br />
+                            驱动器名称：PLDS DVD-RW DS8ABSH
+<br />
+                            描述：CD-ROM Drive
+<br />
+                            盘符：E:
+<br />
+                            驱动器状态：OK
+<br />
+                            是否在使用：false</ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#keyBoardInfo" name="keyBoardInfo" class="cblue">keyBoardInfo()</a></h2>
+                    <div name="keyBoardInfo" style="line-height:25px;">
+                        功能：键盘信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：键盘信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(keyBoardInfo().toString());
+                        </ol>
+                        结果：
+                        <ol>
+                            键盘信息
+                            <br />
+                            键盘描述：USB 输入设备
+                            <br />
+                            键盘名称：Enhanced (101- or 102-key)
+                            <br />
+                            键盘状态：OK
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#mainBoard" name="mainBoard" class="cblue">mainBoard()</a></h2>
+                    <div name="mainBoard" style="line-height:25px;">
+                        功能：主板信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：主板信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(mainBoard().toString());
+                        </ol>
+                        结果：
+                        <ol>
+                            主板信息
+                            <br />
+                            主板ID：To be filled by O.E.M.
+                            <br />
+                            true
+                            <br />
+                            制造商：Gigabyte Technology Co., Ltd.
+                            <br />
+                            是否开启：true
+                            <br />
+                            型号：B85M-D3H
+                            <br />
+                            版本：x.x
+
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#disk" name="disk" class="cblue">disk()</a></h2>
+                    <div name="disk" style="line-height:25px;">
+                        功能：硬盘序列号 信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：硬盘序列号 信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(disk().toString());
+                        </ol>
+                        结果：
+                        <ol>
+                            硬盘信息
+                            <br />
+                            硬盘序列号：-612184245
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#raminfo" name="raminfo" class="cblue">raminfo()</a></h2>
+                    <div name="raminfo" style="line-height:25px;">
+                        功能：获取Ram信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：Ram信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(raminfo().toString());
+                        </ol>
+                        结果：
+                        <ol>
+                            内存信息
+                            <br />
+                            内存总量：6144M
+                            <br />
+                            可用物理内存：6042M
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#ipinfo" name="ipinfo" class="cblue">ipinfo()</a></h2>
+                    <div name="ipinfo" style="line-height:25px;">
+                        功能：获取网络连接信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：网络连接信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(ipinfo().toString());
+                        </ol>
+                        结果：
+                        <ol>
+                            网络连接信息：<br />
+                            MAC地址1：40:8D:5C:12:73:29<br />
+                            IP地址1：192.168.1.83<br />
+                            MAC地址2：00:50:56:C0:00:01<br />
+                            IP地址2：192.168.230.1<br />
+                            MAC地址3：00:50:56:C0:00:08<br />
+                            IP地址3：192.168.244.1<br />
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#pcInfo" name="pcInfo" class="cblue">pcInfo()</a></h2>
+                    <div name="pcInfo" style="line-height:25px;">
+                        功能：获取所有PC机信息 <br />
+                        使用限制：仅适用于IE浏览器，目前不可用，如需使用此方法，请去掉注释信息，并在工具-->Internet选项-->安全-->自定义级别 -->启用"对没有标记为安全的ActiveX控件进行初始化和脚本运行"<br />
+                        返回值：所有信息 <br />
+                        例子：
+                        <ol>
+                            $("#result").html(pcInfo().toString());
+                        </ol>
+                        结果：
+                        <ol>
+                            CPU 信息<br />
+                            CPU序列号:BFEBFBFF000306A9<br />
+                            Intel64 Family 6 Model 58 Stepping 9<br />
+                            CPU编号：CPU0<br />
+                            CPU型号：Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz<br />
+                            CPU状态：1<br />
+                            CPU可用性：3<br />
+                            CUP Level：6<br />
+                            主机名称：ZWL<br />
+                            Processor Type：3<br /><br />
+
+                            硬盘信息<br />
+                            硬盘序列号：null<br /><br />
+
+                            内存信息<br />
+                            内存总量：6144M<br />
+                            可用物理内存：6042M<br /><br />
+
+                            主板信息<br />
+                            主板ID：LB02207870<br />
+                            true<br />
+                            制造商：LENOVO<br />
+                            是否开启：true<br />
+                            型号：INVALID<br />
+                            版本：31900060Std<br /><br />
+
+                            网络连接信息：<br />
+                            MAC地址1：F8:A9:63:B9:E8:B3<br />
+                            IP地址1：192.168.1.33<br /><br />
+
+                            键盘信息<br />
+                            键盘描述：PS/2 标准键盘<br />
+                            键盘名称：增强型(101 或 102 键)<br />
+                            键盘状态：OK<br /><br />
+
+                            CD-ROM 信息<br />
+                            驱动器名称：PLDS DVD-RW DS8ABSH<br />
+                            描述：CD-ROM Drive<br />
+                            盘符：E:<br />
+                            驱动器状态：OK<br />
+                            是否在使用：false<br /><br />
+
+                            软盘信息 
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

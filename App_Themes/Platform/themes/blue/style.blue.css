@@ -1,0 +1,156 @@
+
+/*头部标题栏*/
+/*背景*/
+.topheader {
+    background:#046CAD;
+    border-bottom: 1px solid #5FBBED;
+}
+/*标题字体颜色*/
+.topheader .left h1.logo {
+    color:white;
+}
+/*系统地图左侧的边框、字体颜色*/
+.topheader .left .slogan {
+    border-left: 1px solid #5FBBED;
+    color: white;
+}
+/*右侧人员登录信息*/
+/*背景*/
+.userinfo {
+    background: #07609B url(images/userinfoarrow.png) no-repeat right center;
+}
+/*字体颜色*/
+.userinfo span {
+    color: white;
+}
+/*鼠标滑过*/
+.userinfo:hover {
+    background-color: #629ad7;
+}
+/*右侧人员登录信息展开样式  鼠标滑动颜色*/
+.userdata ul li a:hover {
+    background:#3EAFE1;
+}
+
+/*头部导航栏*/
+/*背景*/
+.header {
+    background: #046CAD;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: inset 0 1px 0 #333;
+    box-shadow: none;
+    border-bottom-color: #5FBBED;
+}
+/*导航左右侧边框*/
+.headermenu li {
+    border-left: 1px solid #5FBBED;
+    border-right: 1px solid #5FBBED;
+}
+/*字体颜色*/
+.headermenu li a {
+    color: white;
+}
+/*鼠标滑到导航的样式*/
+.headermenu li a:hover {
+    background: #629ad7;
+    -moz-box-shadow: inset 0 1px 0 #3EAFE1;
+    -webkit-box-shadow: inset 0 1px 0 #3EAFE1;
+    box-shadow: inset 0 1px 0 #3EAFE1;
+}
+/*当前选中的头部导航背景*/
+.headermenu li.current {
+    border-right-color:#3EAFE1;
+}
+.headermenu li.current a {
+     color: white;
+    background:#3EAFE1 no-repeat center bottom;
+    box-shadow: inset 0 0 0 #3EAFE1;
+}
+
+
+/*左侧导航栏*/
+/*导航下侧的背景*/
+.vernav2 {
+    background-color: white;
+}
+/*二级导航自身背景*/
+.iconmenu ul li a {
+    background-color: #D5E7F1;
+    color: black;
+}
+/*二级导航鼠标滑过*/
+.iconmenu ul li a:hover {
+    color: #046CAD;
+}
+/*三级导航*/
+.iconmenu ul ul {
+    background-color: white;
+}
+.iconmenu ul ul li a {
+    background-color:white;
+    color: black;
+}
+.iconmenu ul ul li a:hover {
+    color: #046CAD;
+}
+/*二、三级导航选中色*/
+.ListNavSelect {
+    font-family: 微软雅黑;
+    text-decoration: none;
+    color: #046CAD;
+}
+/*导航下面向左缩进图片*/
+.togglemenu {
+    border-left: 1px solid #B4CDDA;
+    border-right: 1px solid #B4CDDA;
+    background: url(images/menucollapsed1.png) no-repeat center 0;
+}
+/*导航下面向左缩进后向右展开图片位置*/
+.togglemenu_collapsed {
+    background-position: center -21px;
+    margin: 10px 5px;
+    border-width: 0;
+}
+
+/*普通按钮色*/
+form input[type=submit] {
+    background: #3EAFE1;
+    border: 1px solid #3EAFE1;
+}
+
+/*图片列表样式*/
+.contenttitle2 {
+    border-bottom: 2px solid #3EAFE1;
+}
+
+/*带图标按钮色*/
+/*按钮点击后图标背景色*/
+.btn_orange:active {
+    background: #3EAFE1;
+}
+/*按钮图标颜色，边框颜色*/
+a.btn_orange {
+    background-color: #3EAFE1;
+    border-color: #3EAFE1;
+    color: white;
+}
+/*按钮文字颜色*/
+a.btn_orange span {
+    background-color: #3EAFE1;
+}
+
+a.btn_orange:hover {
+    opacity: 1;
+    color: white;
+    border-color:#3EAFE1;
+}
+
+/*datagrid样式*/
+/*datagrid选中行样式*/
+.datagrid-row-selected {
+    background-color:#3EAFE1;
+}
+/*datagrid鼠标滑过行的样式*/
+.datagrid-row-over {
+    background-color:  #D5E7F1;
+}

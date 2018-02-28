@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .cblue {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="margin:20px;">
+        <h1>PlatAsynchronous.js</h1>
+        <div style="line-height:30px;">
+            使用地址：&lt;script src="/_JScripts/Platform/Common/PlatAsynchronous.js"&gt;&lt;/script&gt;<br />
+            使用说明：异步相关方法
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h2><a href="#AjaxGetJson" name="AjaxGetJson" class="cblue">AjaxGetJson(url, paras, callback)</a></h2>
+                    <div name="AjaxGetJson" style="line-height:25px;">
+                        功能：异步提交获取json数据<br />
+                        输入参数：
+                        <ol>
+                            url：请求地址
+                            <br />
+                            paras：参数
+                            <br />
+                            callback：回调方法
+                        </ol>
+                        例子：
+                        <ol>
+                            AjaxGetJson("localhost", {}, callback);
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#AjaxPost" name="AjaxPost" class="cblue">AjaxPost(url, paras, callback)</a></h2>
+                    <div name="AjaxPost" style="line-height:25px;">
+                        功能：Ajax Post提交返回HTML数据<br />
+                        输入参数：
+                        <ol>
+                            url：请求地址
+                            <br />
+                            paras：参数
+                            <br />
+                            callback：回调方法
+                        </ol>
+                        例子：
+                        <ol>
+                            AjaxPost("localhost", {}, callback);
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#AjaxGet" name="AjaxGet" class="cblue">AjaxGet(url, datatype, callback)</a></h2>
+                    <div name="AjaxGet" style="line-height:25px;">
+                        功能：AjaxGet返回数据<br />
+                        输入参数：
+                        <ol>
+                            url：请求地址
+                            <br />
+                            datatype：数据类型
+                            <br />
+                            callback：回调方法
+                        </ol>
+                        例子：
+                        <ol>
+                            AjaxGet("localhost", "html", callback);
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <h2><a href="#loadScript" name="loadScript" class="cblue">loadScript</a></h2>
+                    <div name="loadScript" style="line-height:25px;">
+                        功能：异步按顺序加载js<br />                     
+                        例子：
+                        <ol>
+                            loadScript.load(["b.js", "a.js"]);
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
